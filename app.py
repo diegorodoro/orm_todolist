@@ -64,7 +64,7 @@ def update(id):
     db.session.commit()
     return "Task updated"
 
-@app.route('delete/<id>',methods=["DELETE"])
+@app.route('/delete/<id>',methods=["DELETE"])
 def delete(id):
     task=Task.query.get_or_404(id)
     db.session.delete(task)    
